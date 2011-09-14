@@ -1,6 +1,5 @@
 package kku.util.app;
 
-
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -22,15 +21,14 @@ public class Feed extends TabActivity {
 		intent = new Intent().setClass(this, Reg.class);
 
 		// Initialize a TabSpec for each tab and add it to the TabHost
-		spec = tabHost.newTabSpec("artists")
-				.setIndicator("Edu", res.getDrawable(R.drawable.reg))
-				.setContent(intent);
+		spec = tabHost.newTabSpec("Edu").setIndicator("Edu",
+				res.getDrawable(R.drawable.reg)).setContent(intent);
 		tabHost.addTab(spec);
+		intent = new Intent().setClass(this, KKU.class);
 
 		// Do the same for the other tabs
-		spec = tabHost.newTabSpec("artists")
-				.setIndicator("News", res.getDrawable(R.drawable.kku))
-				.setContent(intent);
+		spec = tabHost.newTabSpec("News").setIndicator("News",
+				res.getDrawable(R.drawable.kku)).setContent(intent);
 		tabHost.addTab(spec);
 
 		tabHost.setCurrentTab(1);

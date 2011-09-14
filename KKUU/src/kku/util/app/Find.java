@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class Find extends Activity {
     /** Called when the activity is first created. */
@@ -26,6 +27,7 @@ public class Find extends Activity {
         		 //Intent	g = new Intent(getApplicationContext(),Page2.class);
         		 
 			    //startActivity(g);
+				Toast.makeText(getApplicationContext(), "This feature is not available yet." , Toast.LENGTH_SHORT).show();
 			}       	
         });
 		

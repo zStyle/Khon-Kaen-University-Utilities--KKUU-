@@ -33,7 +33,7 @@ public class Reg extends ListActivity {
 	selection = (TextView) findViewById(R.id.selection);
 	registerForContextMenu(selection);
 	try {
-		URL urlRSS = new URL("http://www.news.kku.ac.th/kkunews/index2.php?option=com_rss&feed=RSS1.0&no_html=1");
+		URL urlRSS = new URL("http://202.28.92.175/rss");
 		DocumentBuilder builder = DocumentBuilderFactory.newInstance()
 				.newDocumentBuilder();
 		Document docRSS = builder.parse(urlRSS.openStream());

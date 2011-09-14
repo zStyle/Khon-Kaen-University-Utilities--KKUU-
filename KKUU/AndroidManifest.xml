@@ -18,18 +18,19 @@
 		<activity android:name="AutoMuteController"
 			android:screenOrientation="portrait"></activity>
 		<service android:name="AutoMuteService"></service>
-		<activity android:name="kku.util.al.Preferences"></activity>
+		<activity android:name="kku.util.al.Preferences" android:screenOrientation="portrait"></activity>
 		<receiver android:name="kku.util.al.NetworkStateChanged">
 			<intent-filter>
 				<action android:name="android.net.wifi.STATE_CHANGE" />
 			</intent-filter>
 		</receiver>
 		<service android:name="kku.util.al.KKUWifiLogin"></service>
-		<activity android:name="Find"></activity>
+		<activity android:name="Find" android:screenOrientation="portrait"></activity>
 		<activity android:name="TimeTable" android:screenOrientation="landscape"></activity>
-		<activity android:name="Feed"></activity>
-		<activity android:name="KKU"></activity>
-		<activity android:name="Reg"></activity>
+		<activity android:name="Feed" android:screenOrientation="portrait"></activity>
+		<activity android:name="KKU" android:screenOrientation="portrait"></activity>
+		<activity android:name="Reg" android:screenOrientation="portrait"></activity>
+		<activity android:name="KKUInfo" android:screenOrientation="portrait"></activity>
 	</application>
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
 	<uses-permission android:name="android.permission.INTERNET"></uses-permission>

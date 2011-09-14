@@ -30,4 +30,5 @@
 	<string name="notify_login_error_title">Unable to login to KKU-WiFi</string>
 	<string name="notify_login_error_text">Click to retry.</string>
 	<string name="notify_login_error_invalid_credentials_text">Invalid username or password.</string>
+	<string name="kkuinfo">มหาวิทยาลัยขอนแก่น เป็นมหาวิทยาลัยแห่งแรกของภาคตะวันออกเฉียงเหนือ ตั้งอยู่ที่ถนนมิตรภาพ ตำบลในเมือง อำเภอเมืองขอนแก่นเป็นมหาวิทยาลัยที่พระบาทสมเด็จพระเจ้าอยู่หัวภูมิพลอดุลยเดช โปรดเกล้าฯ ให้ก่อตั้งขึ้นและสถาปนาเป็นมหาวิทยาลัย โดยมีจุดประสงค์เพื่อให้การศึกษาชั้นสูงขยายออกไปถึงภาคตะวันออกเฉียงเหนือ ซึ่งภูมิภาคที่สำคัญที่สุดส่วนหนึ่งของประเทศ ซึ่งต่อไปจะเป็นผลดีต่อการพัฒนายกฐานะความเป็นอยู่ของประชาชนในภูมิภาคนี้ </string>
 </resources>

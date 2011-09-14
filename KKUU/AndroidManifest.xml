@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="kku.util.app" android:versionCode="1" android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="8" />
+
+	<application android:theme="@android:style/Theme.NoTitleBar"
+		android:icon="@drawable/icon" android:label="@string/app_name"
+		android:screenOrientation="portrait">
+		<activity android:name="KKUU_ProjectActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="AppMenu" android:screenOrientation="portrait"></activity>
+		<activity android:name="Info" android:screenOrientation="portrait"></activity>
+		<activity android:name="System" android:screenOrientation="portrait"></activity>
+		<activity android:name="AutoMuteController"
+			android:screenOrientation="portrait"></activity>
+		<service android:name="AutoMuteService"></service>
+		<activity android:name="kku.util.al.Preferences"></activity>
+		<receiver android:name="kku.util.al.NetworkStateChanged">
+			<intent-filter>
+				<action android:name="android.net.wifi.STATE_CHANGE" />
+			</intent-filter>
+		</receiver>
+		<service android:name="kku.util.al.KKUWifiLogin"></service>
+		<activity android:name="Find"></activity>
+		<activity android:name="TimeTable" android:screenOrientation="landscape"></activity>
+		<activity android:name="Feed"></activity>
+		<activity android:name="KKU"></activity>
+		<activity android:name="Reg"></activity>
+	</application>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"></uses-permission>
+</manifest>

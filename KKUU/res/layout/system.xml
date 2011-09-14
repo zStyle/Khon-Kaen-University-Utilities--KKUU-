@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/automute" android:background="#000000" android:layout_marginTop="40dip" android:id="@+id/bt_mute" android:layout_marginRight="10dip"></ImageButton>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/clock_alarm" android:background="#000000" android:layout_marginRight="16dip" android:id="@+id/bt_clock"></ImageButton>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/wifi" android:background="#000000" android:id="@+id/bt_wifi"></ImageButton>
+    
+</LinearLayout>

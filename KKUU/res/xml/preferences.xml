@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<Preference android:title="@string/pref_login_now" android:key="login_now"></Preference>
+	<PreferenceCategory android:title="@string/pref_preferences">
+		<CheckBoxPreference
+			android:defaultValue="false"
+			android:key="enabled"
+			android:title="@string/pref_enabled"
+			android:summary="@string/pref_enabled_summary"/>
+		<EditTextPreference
+			android:key="username"
+			android:title="@string/pref_username"
+			android:summary="@string/pref_username_summary"/>
+		<EditTextPreference
+			android:key="password"
+			android:password="true"
+			android:title="@string/pref_password"
+			android:summary="@string/pref_password_summary"/>
+		<PreferenceScreen
+			android:title="@string/pref_error_notify_title"
+			android:key="error_notify">
+			<CheckBoxPreference
+				android:key="error_notify_sound"
+				android:title="@string/pref_error_notify_sound"
+				android:defaultValue="true"/>
+			<CheckBoxPreference
+				android:key="error_notify_vibrate"
+				android:title="@string/pref_error_notify_vibrate"
+				android:defaultValue="true"/>
+			<CheckBoxPreference
+				android:key="error_notify_lights"
+				android:title="@string/pref_error_notify_lights"
+				android:defaultValue="true"/>
+		</PreferenceScreen>
+		<PreferenceScreen
+			android:title="@string/pref_toast_notify_title"
+			android:key="toast_notify">
+			<CheckBoxPreference
+				android:key="toast_notify_success"
+				android:title="@string/pref_toast_notify_success"
+				android:defaultValue="true"/>
+			<CheckBoxPreference
+				android:key="toast_notify_not_required"
+				android:title="@string/pref_toast_notify_not_required"
+				android:defaultValue="true"/>
+		</PreferenceScreen>
+		<ListPreference
+			android:title="@string/pref_language_title"
+			android:key="language"
+			android:entries="@array/languages"
+			android:entryValues="@array/languages_values"
+			android:defaultValue="default"/>
+	</PreferenceCategory>
+	
+<!--	<PreferenceCategory android:title="@string/pref_about">-->
+<!--		<Preference-->
+<!--			android:key="version" android:title="@string/app_name"-->
+<!--			android:summary="@string/pref_version_summary"/>-->
+<!--		<Preference-->
+<!--			android:summary="@string/pref_website_summary"-->
+<!--			android:key="website"-->
+<!--			android:title="@string/pref_website"/>-->
+<!--		<Preference-->
+<!--			android:summary="@string/pref_author_summary"-->
+<!--			android:key="author"-->
+<!--			android:title="@string/pref_author"/>-->
+<!--	</PreferenceCategory>-->
+</PreferenceScreen>

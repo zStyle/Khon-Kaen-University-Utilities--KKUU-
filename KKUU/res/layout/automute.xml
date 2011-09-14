@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<CheckBox android:id="@+id/automute_cb" android:text="AutoMute"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginTop="40dip"></CheckBox>
+	<ImageButton android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:src="@drawable/mute"
+		android:background="#000000" android:id="@+id/mute_img" android:layout_marginLeft="8dip"></ImageButton>
+	<ImageButton android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:src="@drawable/unmute"
+		android:background="#000000" android:id="@+id/unmute_img" android:layout_marginRight="8dip"></ImageButton>
+</LinearLayout>

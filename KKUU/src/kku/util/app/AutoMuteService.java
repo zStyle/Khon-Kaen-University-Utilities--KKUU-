@@ -58,7 +58,7 @@ public class AutoMuteService extends Service {
 		private void mute(double lat, double lon) {
 			// TODO Auto-generated method stub
 			double top = 16.476707,bot = 16.467901,left = 102.822933,right=102.828169;
-			if(lat < top && lat > bot && lon > left && lon < right){
+			if(lon < top && lon > bot && lat > left && lat < right){
 				mAudioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
 				muted = true;
 				Toast.makeText(AutoMuteService.this, "muted", Toast.LENGTH_SHORT).show();
@@ -70,13 +70,13 @@ public class AutoMuteService extends Service {
 				}else{
 					Log.e("gps", bot + " " + lon + " " + top + "\n" + left + " "
 									+ lon + " " + right);
-//					Toast.makeText(
-//							AutoMuteService.this,
-//							bot + " " + lat + " " + top + "\n" + left + " "
-//									+ lon + " " + right, Toast.LENGTH_SHORT)
-//							.show();
-					Log.v("AutoMuteService", bot + " " + lat + " " + top + "\n" + left + " "
-									+ lon + " " + right);
+					Toast.makeText(
+							AutoMuteService.this,
+							bot + " " + lon + " " + top + "\n" + left + " "
+									+ lat + " " + right, Toast.LENGTH_SHORT)
+							.show();
+					Log.v("AutoMuteService", bot + " " + lon + " " + top + "\n" + left + " "
+									+ lat + " " + right);
 				}
 			}
 		}

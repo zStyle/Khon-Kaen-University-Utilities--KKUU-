@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:layout_marginTop="70dp"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:orientation="horizontal" android:gravity="center_horizontal">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="Student ID:"></TextView>
+		<EditText android:id="@+id/idalarm" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_gravity="center"
+			android:width="140dp" android:maxLength="11" android:maxLines="1"></EditText>
+	</LinearLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity="center_horizontal">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="Wakeup :"></TextView>
+		<EditText android:id="@+id/beforTime" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_gravity="center"
+			android:width="60dp" android:maxLength="2" android:maxLines="1"
+			android:text="0"></EditText>
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text=" Minutes before class"></TextView>
+	</LinearLayout>
+
+
+	<Button android:id="@+id/syncalarm" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="center"
+		android:text="Sync Alarm" android:layout_marginTop="20dp"></Button>
+	<Button android:id="@+id/cancelalarm" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="center"
+		android:text="Cancel Alarm"></Button>
+	<TextView android:layout_gravity="center" android:id="@+id/tabletextview"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="You did not syncronize yet" android:layout_marginTop="30dp"></TextView>
+</LinearLayout>

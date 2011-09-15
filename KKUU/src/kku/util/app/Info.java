@@ -23,12 +23,13 @@ public class Info extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// Intent i = new Intent(getApplicationContext(),KKUInfo.class);
-				// startActivity(i);
-				Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri
-						.parse("http://www.kku.ac.th/kku.php?page=about"));
-
-				startActivity(myIntent);
+				 Intent i = new Intent(getApplicationContext(),KKUInfo.class);
+				 startActivity(i);
+				// Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri
+				// .parse("http://www.kku.ac.th/kku.php?page=about"));
+				//
+				// startActivity(myIntent);
+				
 			}
 		});
 

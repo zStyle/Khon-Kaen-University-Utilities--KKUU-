@@ -34,10 +34,12 @@ public class System extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Toast.makeText(getApplicationContext(), "This feature is not available yet", Toast.LENGTH_SHORT).show();
-				//Intent k = new Intent(getApplicationContext(), Page2.class);
+				// Toast.makeText(getApplicationContext(),
+				// "This feature is not available yet",
+				// Toast.LENGTH_SHORT).show();
+				Intent k = new Intent(getApplicationContext(), setAlarm.class);
 
-				//startActivity(k);
+				startActivity(k);
 			}
 		});
 

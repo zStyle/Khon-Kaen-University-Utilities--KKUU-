@@ -13,10 +13,14 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +29,7 @@ public class Reg extends ListActivity {
 	TextView selection;
 	ArrayList<String> items = new ArrayList<String>();
 	ArrayList<String> strURL = new ArrayList<String>();
+	ArrayList<String> description = new ArrayList<String>();
 
 	@Override
 	public void onCreate(Bundle icicle) {
@@ -43,8 +48,10 @@ public class Reg extends ListActivity {
 			Element element = (Element) words.item(i);
 			String temps = getElementValue(element, "title");
 			String urlTemps = getElementValue(element, "link");
+			String deTemps = getElementValue(element, "description");
 			items.add(temps);
 			strURL.add(urlTemps);
+			description.add(deTemps);
 		}
 		// in.close();
 	} catch (Throwable t) {
@@ -57,9 +64,33 @@ public class Reg extends ListActivity {
 
 @Override
 public void onListItemClick(ListView parent, View v, int position, long id) {
-	Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(strURL.get(position).toString()));
+	 final Dialog dialog = new Dialog(Reg.this);
+     dialog.setContentView(R.layout.dialog);
+     dialog.setTitle("Description");
+     dialog.setCancelable(true);
+     
+     TextView text = (TextView) dialog.findViewById(R.id.TextView01);
+     text.setText(description.get(position).toString());
 
-	startActivity(myIntent);
+     final String url = strURL.get(position).toString();
+
+     Button linkButton = (Button) dialog.findViewById(R.id.link);
+     linkButton.setOnClickListener(new OnClickListener() {
+     public void onClick(View v) {
+   	  Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+
+   		startActivity(myIntent);
+   		dialog.cancel();
+         }
+     });
+     Button cancelButton = (Button) dialog.findViewById(R.id.cancel);
+     cancelButton.setOnClickListener(new OnClickListener() {
+     public void onClick(View v) {
+   	  dialog.cancel();
+         }
+     });
+	
+     dialog.show();
 }
 
 protected String getElementValue(Element parent, String label) {

@@ -24,10 +24,11 @@ public class Find extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-        		 //Intent	g = new Intent(getApplicationContext(),Page2.class);
-        		 
-			    //startActivity(g);
-				Toast.makeText(getApplicationContext(), "This feature is not available yet." , Toast.LENGTH_SHORT).show();
+
+				 Intent g = new Intent(getApplicationContext(),mapEng.class);
+				        		 
+				 startActivity(g);
+				//Toast.makeText(getApplicationContext(), "This feature is not available yet." , Toast.LENGTH_SHORT).show();
 			}       	
         });
 		

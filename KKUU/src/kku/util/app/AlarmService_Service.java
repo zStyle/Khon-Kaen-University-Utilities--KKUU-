@@ -86,7 +86,7 @@ public class AlarmService_Service extends Service {
 	public void onDestroy() {
 		// Cancel the notification -- we use the same ID that we had used to
 		// start it
-		mNM.cancel(R.string.alarm_service_started);
+		//mNM.cancel(R.string.alarm_service_started);
 
 		// Tell the user we stopped.
 		Toast.makeText(this, R.string.alarm_service_finished,
